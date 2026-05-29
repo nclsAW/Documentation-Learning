@@ -1,7 +1,6 @@
 # 📚 Dokumentasi Pembelajaran Pribadi
 
-Kumpulan dokumentasi yang gw buat sendiri sebagai catatan belajar.  
-Semua materi di sini ditulis ulang dengan bahasa yang gw pahami — bukan copy-paste dari mana-mana.
+Kumpulan dokumentasi yang gw buat sendiri sebagai catatan belajar.
 
 ---
 
