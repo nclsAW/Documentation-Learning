@@ -1,7 +1,6 @@
 # 📄 Ringkasan Kode
 
 ## Ringkasan Cepat
-
 ```
 describe          → wadah/grup test
 it / test         → satu skenario test
@@ -18,7 +17,6 @@ spyOn             → awasi/override method yang sudah ada
 ```
 
 ## Ringkasan Tambahan
-
 ```
 xit / xtest / xdescribe  → alias untuk .skip (gaya Jasmine)
 test.todo                 → daftarkan test yang belum ditulis (no callback)
@@ -38,7 +36,6 @@ expectTypeOf (Vitest)    → type-level testing
 ```
 
 ## Mocking Modul & Advanced Mocking
-
 ```
 jest.mock('modul')          → mock satu modul full (package/file) secara otomatis
 jest.requireActual('modul') → ambil fungsi asli dari modul yang sedang di-mock (Partial Mocking)
