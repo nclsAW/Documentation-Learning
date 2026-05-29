@@ -65,6 +65,8 @@ jest.runAllTimers()          → langsung eksekusi semua antrean timer yang seda
 jest.runOnlyPendingTimers()  → eksekusi timer yang saat ini sedang menggantung aja
 ```
 
-# 5. Custom & Utilities
+## Custom & Utilities
+```
 expect.extend({ matcher })   → bikin fungsi matcher buatan sendiri (custom assertion)
 jest.retryTimes(number)      → ulangi test yang gagal otomatis beberapa kali (buat e2e/integration)
+```
