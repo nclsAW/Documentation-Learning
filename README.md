@@ -10,8 +10,7 @@ Kumpulan dokumentasi yang gw buat sendiri sebagai catatan belajar.
 
 | File | Deskripsi |
 |---|---|
-| `unit-testing.md` | Pengenalan unit testing — komponen dasar, matchers, lifecycle, mock & spy dengan contoh JavaScript |
-| `unit-testing-typescript.md` | Versi TypeScript — type annotation, `jest.fn<T>()`, `jest.mocked()`, setup `ts-jest` |
+| Unit Testing | [Documentation](https://github.com/nclsAW/Documentation-Learning/tree/unit-testing) |
 
 ---
 
