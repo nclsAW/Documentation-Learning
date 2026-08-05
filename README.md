@@ -17,3 +17,11 @@
   </p>
   
 </div>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/USERNAME_LU/USERNAME_LU/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/USERNAME_LU/USERNAME_LU/output/github-snake.svg">
+    <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/USERNAME_LU/USERNAME_LU/output/github-snake.svg" width="100%" style="max-width: 850px;" />
+  </picture>
+</div>
