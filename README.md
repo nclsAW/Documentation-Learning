@@ -17,14 +17,3 @@
   </p>
   
 </div>
-
-<div align="center">
-  <picture>
-    <!-- Tampilan saat Dark Mode -->
-    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/nclsAW/raw/output/dist/github-snake-dark.svg">
-    <!-- Tampilan saat Light Mode -->
-    <source media="(prefers-color-scheme: light)" srcset="https://github.com/nclsAW/raw/output/dist/github-snake.svg">
-    <!-- Fallback image -->
-    <img alt="GitHub Contribution Snake Animation" src="https://github.com/nclsAW/raw/output/dist/github-snake.svg" width="100%" style="max-width: 850px;" />
-  </picture>
-</div>
