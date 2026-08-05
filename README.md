@@ -17,12 +17,3 @@
   </p>
   
 </div>
-
-```mermaid
-graph LR
-    A[📄 Requirement Analysis] --> B[📝 Draft Test Cases]
-    B --> C[🧪 Manual Execution]
-    C -->|Bug Found| D[Defect Report]
-    C -->|Pass| E[Demo]
-    D --> F[🔄 Regression Testing & Verify]
-```
