@@ -1,31 +1,28 @@
-# 📚 Dokumentasi Pembelajaran Pribadi
+<div align="center">
 
-Kumpulan dokumentasi yang gw buat sendiri sebagai catatan belajar.
+  # 🚀 Hi, I'm Nicolas!
+  ### QA Enthusiast | Technical Documentation & Software Testing
 
----
+  <a href="https://git.io/typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&pause=1000&color=49F747FF&center=true&vcenter=true&width=430&lines=Software+Testing+QA;Crafting+Clear+Technical+Documentation;Explori" alt="Typing SVG" />
+  </a>
+  <p align="center">
+  <a href="https://drive.google.com/drive/folders/1nldk4XBAvUi7OWPv6EfmMQrd95aaUCC3?usp=sharing" target="_blank">
+    <img src="https://img.shields.io/badge/VIEW_MY_PORTFOLIO--1F2937?style=for-the-badge&logo=googledrive&logoColor=white" alt="Google Drive Portfolio" />
+  </a>
+  
+  <a>
+    <img src="https://img.shields.io/badge/nicolasanelka@gmail.com--1F2937?style=for-the-badge&logo=gmail&logoColor=white" alt="Contact Me" />
+  </a>
+  </p>
+  
+</div>
 
-## 🗂️ Daftar Dokumentasi
-
-### 🧪 Unit Testing
-
-| File | Deskripsi |
-|---|---|
-| Unit Testing | [Documentation](https://github.com/nclsAW/Documentation-Learning/tree/unit-testing) |
-
----
-
-## 📌 Cara Pakai
-
-Dokumentasi ini dibuat buat **referensi cepat** — bukan pengganti dokumentasi resmi.  
-Kalau butuh penjelasan lebih dalam, cek sumber resminya:
-
-- [Jest Docs](https://jestjs.io/docs/getting-started)
-- [Vitest Docs](https://vitest.dev/guide/)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
-
----
-
-## 📝 Catatan
-
-> Dokumentasi ini akan terus diperbarui seiring proses belajar.  
-> Kalau ada yang salah atau kurang, akan dilakukan update secara berkala.
+```mermaid
+graph LR
+    A[📄 Requirement Analysis] --> B[📝 Draft Test Cases]
+    B --> C[🧪 Manual Execution]
+    C -->|Bug Found| D[Defect Report]
+    C -->|Pass| E[Demo]
+    D --> F[🔄 Regression Testing & Verify]
+```
