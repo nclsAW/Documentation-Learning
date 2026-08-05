@@ -20,8 +20,11 @@
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/nclsAW/nclsAW/output/dist/github-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/nclsAW/nclsAW/output/dist/github-snake.svg">
-    <img alt="GitHub Contribution Snake Animation" src="https://raw.githubusercontent.com/nclsAW/nclsAW/output/dist/github-snake.svg" width="100%" style="max-width: 850px;" />
+    <!-- Tampilan saat Dark Mode -->
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/nclsAW/nclsAW/raw/output/dist/github-snake-dark.svg">
+    <!-- Tampilan saat Light Mode -->
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/nclsAW/nclsAW/raw/output/dist/github-snake.svg">
+    <!-- Fallback image -->
+    <img alt="GitHub Contribution Snake Animation" src="https://github.com/nclsAW/nclsAW/raw/output/dist/github-snake.svg" width="100%" style="max-width: 850px;" />
   </picture>
 </div>
