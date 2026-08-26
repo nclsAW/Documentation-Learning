@@ -1,0 +1,38 @@
+# OHR-0005 Custom Fields & Attachments
+
+## User Story
+
+***
+
+Sebagai HR Admin, saya ingin membuat field khusus dan mengunggah dokumen pendukung agar informasi tambahan serta dokumen legalitas karyawan dapat tersimpan rapi.
+
+## Pre-condition
+
+***
+
+* Pengguna terautentikasi sebagai System Administrator / HR Admin.
+* Pengguna berada di modul PIM pada menu Configuration / Custom Fields atau di profil rincian karyawan.
+
+## Acceptance Criteria
+
+***
+
+1. Pembuatan Field Khusus: Sistem dapat membuat field kustom baru (misal: ukuran baju, nomor KTP/BPJS) dan menampilkan field tersebut pada profil karyawan.
+2. Upload Dokumen Pendukung: Sistem dapat menerima dan menyimpan berkas lampiran dokumen pendukung yang diunggah ke profil karyawan.
+3. Pengunduhan Berkas: Berkas lampiran yang telah diunggah dapat diunduh kembali dan dibaca tanpa mengalami kerusakan file.
+4. Validasi Ukuran Berkas: Mengunggah dokumen pendukung yang melebihi batas ukuran maksimal file akan ditolak oleh sistem.
+
+## Test Scenario
+
+***
+
+| **TP**      | **Scene ID** | **Test ID**  | **Type** | **Priority** | **AC Ref** | **Pre-condition**                                                                                                                                  | **Step**                                                                                                                                                                                                                                                              | **Expected**                                                                                                             | **Actual**  | **Status** | **Notes** |
+| ----------- | ------------ | ------------ | -------- | ------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ----------- | ---------- | --------- |
+| TP-OHR-0002 | OHR-PIM-0002 | OHR-CFA-0001 | POS      | P1           | 1          | User login sebagai HR Admin dan berada di menu _PIM > Configuration > Custom Fields_.                                                              | <ol start="1"><li>Klik tombol <strong>Add</strong>.</li><li>Masukkan <em>Field Name</em> (misal: "Hospital ID").</li><li>Pilih <em>Screen</em> (misal: "Personal Details") dan <em>Type</em> (misal: "Text or Number").</li><li>Klik <strong>Save</strong>.</li></ol> | _Custom Field_ "Hospital ID" berhasil dibuat dan tersimpan di daftar _Custom Fields_.                                    | As Expected | PASSED     |           |
+| TP-OHR-0002 | OHR-PIM-0002 | OHR-CFA-0002 | POS      | P1           | 1          | _Custom Field_ "Hospital ID" sudah dibuat pada _Screen_ "Personal Details". User berada di halaman rincian profil karyawan.                        | <ol start="1"><li>Buka halaman <em>Personal Details</em> karyawan.</li><li>Isi field <em>Custom Field</em> "Hospital ID" dengan nilai valid.</li><li>Klik <strong>Save</strong>.</li></ol>                                                                            | Nilai data _Custom Field_ berhasil tersimpan di profil karyawan dan dapat ditampilkan kembali dengan akurat.             | As Expected | PASSED     |           |
+| TP-OHR-0002 | OHR-PIM-0002 | OHR-CFA-0003 | NEG      | P1           | 1          | User berada di menu _PIM > Configuration > Custom Fields_.                                                                                         | <ol start="1"><li>Klik tombol <strong>Add</strong>.</li><li>Biarkan field <em>Field Name</em> kosong.</li><li>Klik <strong>Save</strong>.</li></ol>                                                                                                                   | Sistem menolak pembuatan field kustom dan menampilkan pesan validasi _"Required"_.                                       | As Expected | PASSED     |           |
+| TP-OHR-0002 | OHR-PIM-0002 | OHR-CFA-0004 | POS      | P1           | 2          | User berada di profil rincian karyawan pada tab/section _Attachments_.                                                                             | <ol start="1"><li>Klik tombol <strong>Add</strong>.</li><li>Unggah berkas dokumen legalitas (misal: Test.pdf ukuran 500 KB).</li><li>Isi <em>Comment</em> (opsional).</li><li>Klik <strong>Save</strong>.</li></ol>                                                   | Berkas lampiran berhasil diunggah, tersimpan di profil karyawan, dan muncul pada tabel daftar _Attachments_.             | As Expected | PASSED     |           |
+| TP-OHR-0002 | OHR-PIM-0002 | OHR-CFA-0005 | NEG      | P1           | 4          | User berada di section _Attachments_ pada profil karyawan. Batas maksimum unggahan file adalah 1 MB (atau sesuai limit konfigurasi server/sistem). | <ol start="1"><li>Klik tombol <strong>Add</strong>.</li><li>Pilih berkas dokumen yang ukurannya melebihi batas.</li><li>Klik <strong>Save</strong>.</li></ol>                                                                                                         | Sistem menolak pengunggahan berkas dan menampilkan pesan error batas maksimum ukuran file (_"File size exceeds limit"_). | As Expected | PASSED     |           |
+| TP-OHR-0002 | OHR-PIM-0002 | OHR-CFA-0006 | BND      | P1           | 4          | User berada di section _Attachments_ profil karyawan.                                                                                              | <ol start="1"><li>Klik <strong>Add</strong>.</li><li>Unggah berkas dengan format di luar aturan bisnis (misal: file .nfo).</li><li>Klik <strong>Save</strong>.</li></ol>                                                                                              | Sistem menolak pengunggahan berkas dan menampilkan pesan error batas maksimum ukuran file (_"File size exceeds limit"_). | As Expected | PASSED     |           |
+| TP-OHR-0002 | OHR-PIM-0002 | OHR-CFA-0007 | POS      | P1           | 3          | Berkas `KTP_Budi.pdf` sudah berhasil diunggah dan terdaftar di tabel _Attachments_ karyawan.                                                       | <ol start="1"><li>Pada tabel <em>Attachments</em>, klik icon/nama berkas <code>KTP_Budi.pdf</code>.</li><li>Tunggu proses <em>download</em> selesai.</li><li>Buka file hasil unduhan.</li></ol>                                                                       | Berkas berhasil diunduh ke penyimpanan lokal, file tidak corrupt/rusak, dan isi dokumen dapat dibuka/dibaca secara utuh. | As Expected | PASSED     |           |
+| TP-OHR-0002 | OHR-PIM-0002 | OHR-CFA-0008 | POS      | P2           | 2          | Berkas `KTP_Budi.pdf` terdaftar di tabel _Attachments_ karyawan.                                                                                   | <ol start="1"><li>Pada baris berkas <code>KTP_Budi.pdf</code>, klik icon <strong>Delete</strong>.</li><li>Konfirmasi modal pop-up hapus.</li></ol>                                                                                                                    | Berkas lampiran berhasil terhapus dari daftar _Attachments_ profil karyawan.                                             | As Expected | PASSED     |           |

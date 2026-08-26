@@ -1,61 +1,29 @@
-<div align="center">
+# Introduction
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2E9EF7,100:0B1F3A&height=180&section=header&text=Portfolio&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Manual%20Testing%20%E2%80%A2%20Test%20Automation%20%E2%80%A2%20Documentation&descAlignY=58&descSize=16" width="100%"/>
+Dokumentasi ini merupakan representasi penulisan teknis berbasis _black-box audit_ dan eksplorasi fungsional langsung pada lingkungan _production-ready/dummy staging_ publik. Dokumen disusun menggunakan standardisasi formal industri (SOP, arsitektur, dan integrasi API) untuk merekonstruksi alur sistem dari perspektif _technical writer_, meskipun proses penyusunannya tidak melalui tahapan SDLC/prosedur internal tim pengembang secara langsung.
 
-</div>
+### Metodologi & Ruang Lingkup:
 
-This repository was created to facilitate access to concise portfolio summaries and to ensure that test scenario formats are adjusted whenever possible. For now, it will be consolidated into a single repository; once it becomes large enough, it will be split into separate branches within that single repo.
+* **Manual Testing Matrix (Happy, Negative & Edge Cases):** Pengujian fungsional modul difokuskan pada skenario _Happy Path_ (alur normal), _Negative Path_ (validasi input/error handling), serta pengujian _Edge Cases_ tertentu yang dipetakan sebagai bagian dari skenario negatif untuk melihat batas ketahanan sistem.
+* **Module Breakdown & Scope Definition (Jira):** Setiap modul dipisahkan secara independen ke dalam Jira Task yang memuat deskripsi awal, batasan _scope_, dependensi fitur, serta _sub-task_ teknis terkait.
+* **Issue Tracking & Bug Reporting (Jira):** Temuan anomali, _bug_, atau kegagalan validasi dicatat langsung sebagai _Issue/Bug Ticket_ pada modul yang bersangkutan, lengkap dengan _steps to reproduce_, _expected vs actual behavior_, dan _severity level_.
+* **Centralized Live Feedback Document (Confluence):** _Catatan Adaptasi:_ Mengingat pengujian dilakukan langsung pada satu versi _live production dummy_ (bukan _multi-version release cycle_), pencatatan _feedback_ dan temuan sistemik disatukan ke dalam satu dokumen Live Documentation & Feedback Hub terpusat untuk seluruh aplikasi agar progres review tetap konsolidatif.
 
-<details>
-<summary>Summary Detail</summary>
+### Kategori Dokumentasi yang Tersedia:
 
-<details style="margin-left: 20px"><summary>ParaBank</summary>
-  
+* **Module Scope & Task Specifications (Jira Structure):**
+  * Definisi fungsionalitas tiap modul aplikasi.
+  * Rincian batasan kerja (_in-scope_ vs _out-of-scope_) dan kriteria penerimaan (_acceptance criteria_).
+* **Test Scenario & Execution Logs:**
+  * Matriks pengujian manual (_Happy Path_, _Negative Path_, dan _Edge Cases_).
+  * Log eksekusi parameter input dan respons sistem nyata.
+* **Issue Management & Bug Reports:**
+  * Tiket pelaporan _bug_ berbasis modul di Jira.
+  * Dokumentasi reproduksi masalah dan dampak teknisnya terhadap modul lain.
+* **System Feedback & Review Runbook (Confluence Live Doc):**
+  * Ringkasan evaluasi fungsional aplikasi secara menyeluruh.
+  * Catatan _technical improvement_ dan rekomendasi perbaikan untuk iterasi berikutnya.
 
-### Test Environment
-| Parameter | Detail |
-|---|---|
-| URL | [ParaBank \| Welcome \| Online Banking](https://parabank.parasoft.com/parabank/index.htm) |
-| Browser | Google Chrome |
-| OS | Windows 11 |
-| Test Management Tool | Jira |
-| Documentation Tool | Confluence |
-
-### Execution Status
-| Status | Jumlah Test Case | Persentase |
-|---|---|---|
-| Passed | 51 | 78.46% |
-| Failed | 14 | 21.54% |
-| Blocked | 0 | 0% |
-| **Total** | **65** | **100%** |
-
-### Defect Summary by Severity
-| Severity | Open | Resolved/Closed |
-|---|---|---|
-| Critical/Blocker | 3 | 0 |
-| High | 8 | 0 |
-| Medium | 0 | 0 |
-| Low/Minor | 3 | 0 |
-| **Total** | **14** | **0** |
-
-### Key Defect Log
-| Jira Key | Bug Summary | Severity | Status | Module |
-|---|---|---|---|---|
-| KAN-20 | Logout tidak clear browser cache (no Cache-Control header) | Critical | Open | User Logout |
-| KAN-21 | Search kosong tidak nunjukin empty state | Low | Open | Find Transactions |
-| KAN-22 | Registrasi bisa pakai spasi doang, tidak ada trim validation | High | Open | Register |
-| KAN-23 | Update Contact Info bisa pakai spasi, tidak ada trim validation | High | Open | Update Contact Info |
-| KAN-26 | Open New Account tidak validasi saldo cukup | High | Open | Open New Account |
-| KAN-27 | Transfer Funds tidak validasi limit saldo (overdraft) | Critical | Open | Transfer Funds |
-| KAN-28 | Transfer Funds terima nominal negatif | Critical | Open | Transfer Funds |
-| KAN-29 | Transfer Funds bisa pilih akun sender = recipient | High | Open | Transfer Funds |
-| KAN-30 | Bill Pay tidak validasi saldo cukup | High | Open | Bill Pay |
-| KAN-31 | Request Loan crash (HTTP 500) kalau Down Payment kosong | High | Open | Request Loan |
-| KAN-32 | Request Loan crash (HTTP 500) kalau input non-numeric | High | Open | Request Loan |
-</details>
-
-</details>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0B1F3A,100:2E9EF7&height=100&section=footer" width="100%"/>
-
-</div>
+{% hint style="info" %}
+Portofolio ini berfokus pada eksekusi manual dan dokumentasi terstruktur berdasarkan kapabilitas yang dapat diakses langsung. Detail dan metrik tambahan akan terus diperbarui secara berkala seiring berjalannya review teknis lanjutan maupun di proyek selanjutnya.
+{% endhint %}
