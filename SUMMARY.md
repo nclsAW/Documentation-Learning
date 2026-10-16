@@ -3,6 +3,10 @@
 * [Introduction](README.md)
 * [Snippets](snippets.md)
 
+## Stokify
+
+* [Product Requirement Document \[Stokify\]](stokify/product-requirement-document-stokify.md)
+
 ## Summary ID <a href="#id" id="id"></a>
 
 * [Automation Exercise](id/automation-exercise.md)
