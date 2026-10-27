@@ -9,15 +9,19 @@
 
 ## Summary ID <a href="#id" id="id"></a>
 
+* [CV](id/cv.md)
 * [Automation Exercise](id/automation-exercise.md)
 * [OrangeHRM](id/orangehrm.md)
 * [ParaBank](id/parabank.md)
+* [Flowchart](id/flowchart.md)
 
 ## Summary EN <a href="#en" id="en"></a>
 
+* [CV](en/cv.md)
 * [Automation Exercise](en/automation-exercise.md)
 * [OrangeHRM](en/orangehrm.md)
 * [ParaBank](en/parabank.md)
+* [Flowchart](en/flowchart.md)
 
 ## Automation Exercise
 
